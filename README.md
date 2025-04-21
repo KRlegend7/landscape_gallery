@@ -21,7 +21,7 @@ A Django application for managing landscape images with AWS S3 integration and C
 1. Clone and Setup:
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/KRlegend7/landscape_gallery
 cd landscape_gallery
 
 # Create virtual environment
