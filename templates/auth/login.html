@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Landscape Gallery{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2>Login</h2>
+    
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="social-auth">
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn">
+            Login with Google
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .auth-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .google-btn {
+        display: inline-block;
+        background-color: #4285f4;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+
+    .google-btn:hover {
+        background-color: #357abd;
+    }
+
+    .messages {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .messages li {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+
+    .error {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+</style>
+{% endblock %}

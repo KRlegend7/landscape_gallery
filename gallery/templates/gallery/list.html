@@ -1,0 +1,25 @@
+<!-- templates/gallery/list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="landscapes-container">
+    <h2>Landscapes</h2>
+    {% if landscapes %}
+        <div class="landscape-grid">
+            {% for landscape in landscapes %}
+            <div class="landscape-card">
+                <h3>{{ landscape.name }}</h3>
+                <p>{{ landscape.description }}</p>
+                <img src="{{ landscape.s3_image_url }}" alt="{{ landscape.name }}">
+                <div class="image-info">
+                    <small>Original URL: {{ landscape.original_image_url }}</small>
+                    <small>S3 URL: {{ landscape.s3_image_url }}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No landscapes uploaded yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

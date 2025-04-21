@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload CSV - Landscape Gallery{% endblock %}
+
+{% block content %}
+<div class="upload-container">
+    <h2>Upload CSV File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="csv_file">Select CSV file:</label>
+            <input type="file" name="csv_file" id="csv_file" accept=".csv">
+        </div>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}
