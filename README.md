@@ -1,4 +1,3 @@
-# ```markdown
 # Landscape Gallery
 
 A Django application for managing landscape images with AWS S3 integration and CSV import functionality. Features include OAuth authentication, automated image processing, and comprehensive testing.
@@ -246,9 +245,6 @@ Common Issues:
 4. Push to branch
 5. Create Pull Request
 
-## License
-MIT License - see LICENSE file
-
 ## Support
 Create issue or contact Kearamirezgu@unal.edu.co
-```
+
